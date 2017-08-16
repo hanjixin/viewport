@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>计算器</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width:200px ;
+				height:250px;
+				
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				margin:-100px -125px;
+				
+			}
+			/*.box td{
+				width: 50px;
+				height: 45px;
+				
+			}*/
+			.box button{
+				width: 50px;
+				height: 45px
+			}
+			.box .b{
+				height: 45px;
+				width: 102px;
+			}
+			
+		</style>
+	</head>
+	
+	<body>
+		<div class="box">
+			<table border="1" cellspacing="0" cellpadding="0">
+			<thead>
+				<tr><td id="shuru" colspan="4" style="text-align: right;height: 50px;background-color:silver ;">欢迎使用韩吉鑫的计算器</td></tr>
+			</thead>
+			<tbody>
+				
+				
+				<tr>
+					<td><button id="num_c">c</button></td>
+					<td><button id="num_cheng">*</button></td>
+					<td><button id="num_chu">/</button></td>
+					<td><button id="num_jian">-</button></td>
+				</tr>
+				<tr>
+					<td><button id="num_7">7</button></td>
+					<td><button id="num_8">8</button></td>
+					<td><button id="num_9">9</button></td>
+					<td rowspan="2" ><button style="width: 50px;height: 92px;" id="num_jia">+</button></td>
+				</tr>
+				<tr>
+					<td><button id="num_4">4</button></td>
+					<td><button id="num_5">5</button></td>
+					<td><button id="num_6">6</button></td>
+				
+				</tr>
+				<tr>
+					<td><button id="num_1">1</button></td>
+					<td><button id="num_2">2</button></td>
+					<td><button id="num_3">3</button></td>
+					<td rowspan="2"><button style="width: 50px;height: 92px;" id="num-deng">=</button></td>
+				</tr>
+				<tr>
+					<td colspan="2" ><button class="b" id="num_0">0</button></td>
+					
+					<td><button id="num_dian">.</button></td>
+					
+				</tr>
+			</tbody>
+			</table>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var bianliang="";
+		var bianliang2="";
+		var kaiguan3=0;
+		var num_c=document.getElementById("num_c");
+		var num_cheng=document.getElementById("num_cheng");
+		var num_chu=document.getElementById("num_chu");
+		var num_jian=document.getElementById("num_jian");
+		var nun_7=document.getElementById("num_7");
+		var num_8=document.getElementById("num_8");
+		var num_9=document.getElementById("num_9");
+		var num_jia=document.getElementById("num_jia");
+		var num_4=document.getElementById("num_4");
+		var num_5=document.getElementById("num_5");
+		var num_6=document.getElementById("num_6");
+		var num_1=document.getElementById("num_1");
+		var num_2=document.getElementById("num_2");
+		var num_3=document.getElementById("num_3");
+		var num_0=document.getElementById("num_0");
+		var num_deng=document.getElementById("num-deng");
+		var num_dian=document.getElementById("num_dian");
+		num_0.onclick=function(){
+			if((num_jia.onclick||num_jian.onclick||num_cheng.onclick||num_cheng.onclick)&&kaiguan3)
+			{bianliang2+="0";}
+			bianliang+="0";
+			
+			//Number(bianliang);
+			if(bianliang.length<15)
+			{document.getElementById("shuru").innerHTML=bianliang;}
+			else
+			{
+			   
+				document.getElementById("shuru").innerHTML="超出范围";}
+		}
+		num_1.onclick=function(){
+			if((num_jia.onclick||num_jian.onclick||num_cheng.onclick||num_cheng.onclick)&&kaiguan3)
+			{bianliang2+="1";}
+			bianliang+="1";
+			
+			//Number(bianliang);
+			if(bianliang.length<15)
+			{document.getElementById("shuru").innerHTML=bianliang;}
+			else
+			{
+			   
+				document.getElementById("shuru").innerHTML="超出范围";}
+		}
+		num_2.onclick=function(){
+			if((num_jia.onclick||num_jian.onclick||num_cheng.onclick||num_cheng.onclick)&&kaiguan3)
+			{bianliang2+="2";}
+			bianliang+="2";
+			
+			//Number(bianliang);
+			if(bianliang.length<15)
+			{document.getElementById("shuru").innerHTML=bianliang;}
+			else
+			{
+			   
+				document.getElementById("shuru").innerHTML="超出范围";}
+		}
+		num_3.onclick=function(){
+			if((num_jia.onclick||num_jian.onclick||num_cheng.onclick||num_cheng.onclick)&&kaiguan3)
+			{bianliang2+="3";}
+			bianliang+="3";
+			//Number(bianliang);
+			if(bianliang.length<15)
+			{document.getElementById("shuru").innerHTML=bianliang;}
+			else
+			{
+			   
+				document.getElementById("shuru").innerHTML="超出范围";}
+		}
+		
+		num_4.onclick=function(){
+			bianliang+="4";
+			if((num_jia.onclick||num_jian.onclick||num_cheng.onclick||num_cheng.onclick)&&kaiguan3)
+		    {bianliang2+="4";}
+			
+			//Number(bianliang);
+			if(bianliang.length<15)
+			{document.getElementById("shuru").innerHTML=bianliang;}
+			else
+			{
+			   
+				document.getElementById("shuru").innerHTML="超出范围";}
+		}
+		num_5.onclick=function(){
+			bianliang+="5";
+			if((num_jia.onclick||num_jian.onclick||num_cheng.onclick||num_cheng.onclick)&&kaiguan3)
+			{bianliang2+="5";}
+			//Number(bianliang);
+			if(bianliang.length<15)
+			{document.getElementById("shuru").innerHTML=bianliang;}
+			else
+			{
+			   
+				document.getElementById("shuru").innerHTML="超出范围";}
+		}
+		num_6.onclick=function(){
+			bianliang+="6";
+			if((num_jia.onclick||num_jian.onclick||num_cheng.onclick||num_cheng.onclick)&&kaiguan3)
+			{bianliang2+="6";}
+//			Number(bianliang);
+			if(bianliang.length<15)
+			{document.getElementById("shuru").innerHTML=bianliang;}
+			else
+			{
+			   
+				document.getElementById("shuru").innerHTML="超出范围";}
+		}
+		num_7.onclick=function(){
+			bianliang+="7";
+			if((num_jia.onclick||num_jian.onclick||num_cheng.onclick||num_cheng.onclick)&&kaiguan3)
+			{bianliang2+="7";}
+//			Number(bianliang);
+			if(bianliang.length<15)
+			{document.getElementById("shuru").innerHTML=bianliang;}
+			else
+			{
+			   
+				document.getElementById("shuru").innerHTML="超出范围";}
+		}
+		num_8.onclick=function(){
+			bianliang+="8";
+			if((num_jia.onclick||num_jian.onclick||num_cheng.onclick||num_cheng.onclick)&&kaiguan3)
+			{bianliang2+="8";}
+//			Number(bianliang);
+			if(bianliang.length<15)
+			{document.getElementById("shuru").innerHTML=bianliang;}
+			else
+			{
+			   
+				document.getElementById("shuru").innerHTML="超出范围";}
+		}
+		num_9.onclick=function(){
+			bianliang+="9";
+			if((num_jia.onclick||num_jian.onclick||num_cheng.onclick||num_cheng.onclick)&&kaiguan3)
+			{bianliang2+="9";}
+			
+			if(bianliang.length<15)
+			{document.getElementById("shuru").innerHTML=bianliang;}
+			else
+			{
+			   
+				document.getElementById("shuru").innerHTML="超出范围";}
+		}
+	    var kaiguan=1;
+			
+
+		num_dian.onclick=function(){
+			if(kaiguan)
+			{
+			bianliang+=".";
+			
+			if(bianliang.length<15)
+			{document.getElementById("shuru").innerHTML=bianliang;}
+			else
+			{
+			   
+				document.getElementById("shuru").innerHTML="超出范围";}
+		}
+			kaiguan=0}
+		var kaiguanjia=1;
+		num_jia.onclick=function(){
+			kaiguan3=1;
+			if(kaiguanjia)
+			{
+			zhongzhuan=bianliang;
+		
+			bianliang+="+";
+		    
+			document.getElementById("shuru").innerHTML=bianliang;
+			
+		} 
+		     kaiguanjia=0;}
+		var kaiguanjian=1;
+		num_jian.onclick=function(){
+			kaiguan3=1;
+			if(kaiguanjian)
+			{
+			zhongzhuan=bianliang;
+		
+			bianliang+="-";
+		    
+			document.getElementById("shuru").innerHTML=bianliang;
+		   
+		} 
+		     kaiguanjian=0;}
+		var kaiguancheng=1;
+		num_cheng.onclick=function(){
+			kaiguan3=1;
+			if(kaiguancheng)
+			{
+			zhongzhuan=bianliang;
+		
+			bianliang+="*";
+		    
+			document.getElementById("shuru").innerHTML=bianliang;
+		   
+		} 
+		     kaiguancheng=0;}
+		var kaiguanchu=1;
+		num_chu.onclick=function(){
+			kaiguan3=1;
+			if(kaiguanchu)
+			{
+			zhongzhuan=bianliang;
+		
+			bianliang+="/";
+		    
+			document.getElementById("shuru").innerHTML=bianliang;
+		   
+		} 
+		     kaiguanchu=0;}
+		
+		num_deng.onclick=function(){
+			
+			if(kaiguanjia==0)
+			{ sum=Number(zhongzhuan)+Number(bianliang2);
+			document.getElementById("shuru").innerHTML=sum;}
+		    if(kaiguanjian==0)
+			 {sum=Number(zhongzhuan)-Number(bianliang2);
+			 document.getElementById("shuru").innerHTML=sum;
+			 }
+		    if(kaiguancheng==0)
+			 {sum=Number(zhongzhuan)*Number(bianliang2);
+			 document.getElementById("shuru").innerHTML=sum;
+			 }
+			if(kaiguanchu==0)
+			 {sum=Number(zhongzhuan)/Number(bianliang2);
+			 document.getElementById("shuru").innerHTML=sum;
+			 }
+			kaiguan=1;
+			kaiguanjian=1;
+			kaiguanjia=1;
+			kaiguancheng=1;
+			kaiguanchu=1;
+			kaiguan3=0;
+				
+			 bianliang="";
+			 bianliang2="";
+			 zhongzhuan="";
+			 sum=0;
+			}
+		    num_c.onclick=function(){
+		    	kaiguan=1;
+			kaiguanjian=1;
+			kaiguanjia=1;
+			kaiguancheng=1;
+			kaiguanchu=1;
+			kaiguan3=0;
+				
+			 bianliang="";
+			 bianliang2="";
+			 zhongzhuan="";
+			 sum=0;
+		    document.getElementById("shuru").innerHTML=bianliang;	
+		    }
+	</script>
+</html>
