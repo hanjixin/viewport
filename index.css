@@ -1,0 +1,91 @@
+*{
+    padding:0;
+    margin: 0;
+}
+.head{
+    height:70px;
+    padding-top: 5px;
+    text-align: center;
+    background:#ff445f;
+    width: 100%;
+}
+.head-top{
+    font-size: 22px;
+    color: white;
+}
+.head-bottom{
+    margin-top: 6px;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+.head-bottom li{
+   margin: 0 5px;
+    padding: 5px;
+    width: 10%;
+    color: #eeeeee;
+
+}
+
+.content-head{
+    display: flex;
+    flex-direction:row;
+    height: 30px;
+
+
+
+}
+.par{
+    display: flex;
+    flex-direction: column;
+}
+.user{
+    height: 30px;
+    border-radius: 50%;
+    display: block;
+}
+.usernamer{
+    font-size: 10px;
+    color: blue;
+}
+.time{
+    color: #ddd;
+    font-size:10px;
+    align-items: center;
+}
+.sss{
+    max-width: 100%;
+    height: 200px;
+
+}
+.sss .video{
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+
+    height: 100%;
+
+}
+.ppp{
+
+    display: block;
+   /*justify-content: center;*/
+    margin: 0 auto;
+    margin-top: 10px;
+    max-width: 100%;
+    /*height: 200px;*/
+    overflow: hidden;
+    /*display: flex;*/
+    /*justify-content: space-around;*/
+}
+.content{
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.active{
+    border-bottom: 3px solid white;
+}
+/*
+if(p1.type==num){
+    content+="<div> <p class='conytent-head'><img class='user' src='"+p1.profile_image+"'/>"+ "<p class='usernamer'>"+p1.name +"</p><p class='time'>"+p1.p1.create_time+"</p></p>" +"<p class='text'> "+p1.text+"</p>"  +"<p class='sss'><video src='"+ p1.video_uri+"'\></p>"</div>";
