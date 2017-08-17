@@ -1,7 +1,7 @@
 function FunnyStory() {
 
 }
-FunnyStory.HOST="http://route.showapi.com/";
+FunnyStory.HOST="https://route.showapi.com/";
 FunnyStory.GETSTORY="255-1";
 FunnyStory.prototype.loadData=function (num) {
     var result=null;
